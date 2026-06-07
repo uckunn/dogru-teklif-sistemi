@@ -1,0 +1,12 @@
+import streamlit as st
+
+st.title("Doğru Mühendislik Teklif Sistemi")
+st.write("Teklif oluşturma uygulamasına hoş geldiniz!")
+
+# Basit bir örnek alan
+fiyat = st.number_input("Birim Fiyat", min_value=0)
+miktar = st.number_input("Miktar", min_value=0)
+
+if st.button("Hesapla"):
+    toplam = fiyat * miktar
+    st.success(f"Toplam Tutar: {toplam} TL")
